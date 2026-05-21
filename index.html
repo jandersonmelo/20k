@@ -1,0 +1,2288 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Educacional +20 mil - Atividades Educativas Prontas</title>
+  <meta name="description" content="Pare de perder horas procurando atividades educativas e tenha acesso imediato a mais de 20 mil materiais prontos para ensinar crianças brincando.">
+
+  <!-- Preload Critical Fonts -->
+  <link rel="preload" href="./fonts/Stolzl-Bold-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Stolzl-Book-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./imgs/mockup-principal.webp" as="image">
+  <script>
+    window.pixelId = "6a00e758b644022afed6568a";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  </script>
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-xcod-sck
+    data-utmify-prevent-subids
+    async
+    defer
+  ></script>
+  <style>
+    /* Font Loading */
+    @font-face {
+      font-family: 'Stolzl';
+      src: url('./fonts/Stolzl-Book-400.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Stolzl';
+      src: url('./fonts/Stolzl-Regular-500.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Stolzl';
+      src: url('./fonts/Stolzl-Medium-600.woff2') format('woff2');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Stolzl';
+      src: url('./fonts/Stolzl-Bold-700.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* Design System Tokens */
+    :root {
+      --font-primary: 'Stolzl', sans-serif;
+      
+      /* Color Palette */
+      --color-bg-dark: #0b0a1e;
+      --color-bg-dark-alt: #13112b;
+      --color-bg-light: #ffffff;
+      --color-bg-light-alt: #f8fafc;
+      
+      --color-text-dark: #0f172a;
+      --color-text-light: #f8fafc;
+      --color-text-muted-dark: #475569;
+      --color-text-muted-light: #94a3b8;
+      
+      --color-primary: #ff6b35; /* Orange/Coral highlight */
+      --color-accent-yellow: #facc15; /* Yellow highlight for dark backgrounds */
+      --color-accent-orange: #ea580c; /* Orange highlight for light backgrounds */
+      
+      --color-btn-green: #15803d; /* High-contrast checkout green */
+      --color-btn-green-hover: #166534;
+      --color-btn-green-pulse: rgba(21, 128, 61, 0.4);
+      --color-red: #dc2626;
+    }
+
+    /* Reset & Base Styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: var(--font-primary);
+      color: var(--color-text-dark);
+      background-color: var(--color-bg-light);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    img, video {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border: none;
+      box-shadow: none; /* Critical: No border or shadow on images */
+    }
+
+    h1, h2, h3, h4 {
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    /* Helper Classes */
+    .highlight-dark {
+      color: var(--color-accent-yellow);
+      font-weight: 700;
+    }
+
+    .highlight-light {
+      color: var(--color-accent-orange);
+      font-weight: 700;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 2rem 1.25rem;
+      }
+    }
+
+    /* Animations */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(21, 128, 61, 0.7);
+      }
+      70% {
+        transform: scale(1.04);
+        box-shadow: 0 0 0 12px rgba(21, 128, 61, 0);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(21, 128, 61, 0);
+      }
+    }
+
+    @keyframes textPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.02); }
+    }
+
+    @keyframes bounceDown {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    .btn-pulse {
+      animation: pulse 2.2s infinite ease-in-out;
+    }
+
+    .red-pulse-text {
+      color: var(--color-red);
+      font-weight: 700;
+      font-size: 1.15rem;
+      animation: textPulse 1.5s infinite ease-in-out;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .bounce-arrow {
+      color: var(--color-red);
+      font-size: 2.2rem;
+      font-weight: bold;
+      animation: bounceDown 1.2s infinite ease-in-out;
+      text-align: center;
+      display: block;
+      margin: 0.5rem auto 1.5rem auto;
+      user-select: none;
+    }
+
+    /* Buttons */
+    .btn-cta {
+      background-color: var(--color-btn-green);
+      color: #ffffff !important;
+      font-family: var(--font-primary);
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding: 1.2rem 2.2rem;
+      border-radius: 50px; /* Rounded button styling */
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      transition: background-color 0.25s ease, transform 0.2s ease;
+      letter-spacing: 0.5px;
+      outline: none;
+    }
+
+    .btn-cta:hover {
+      background-color: var(--color-btn-green-hover);
+    }
+
+    @media (max-width: 480px) {
+      .btn-cta {
+        font-size: 1.05rem;
+        padding: 1.1rem 1.5rem;
+        width: 100%;
+      }
+    }
+
+    /* Section Styles */
+    .section-dark {
+      background-color: var(--color-bg-dark);
+      color: var(--color-text-light);
+    }
+
+    .section-dark-alt {
+      background-color: var(--color-bg-dark-alt);
+      color: var(--color-text-light);
+    }
+
+    .section-light {
+      background-color: var(--color-bg-light);
+      color: var(--color-text-dark);
+    }
+
+    .section-light-alt {
+      background-color: var(--color-bg-light-alt);
+      color: var(--color-text-dark);
+    }
+
+    /* --- BLOCO 1: VENDA IMEDIATA --- */
+    .hero-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .hero-headline {
+      font-size: 2.2rem;
+      text-align: center;
+      max-width: 900px;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-subheadline {
+      font-size: 1.15rem;
+      text-align: center;
+      max-width: 800px;
+      color: var(--color-text-muted-light);
+      margin-top: 0.5rem;
+    }
+
+    .hero-mockup-wrap {
+      width: 100%;
+      max-width: 460px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-mockup-wrap img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .hero-cta-wrap {
+      margin-top: 1rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Desktop layout overrides for Bloco 1 */
+    @media (min-width: 992px) {
+      .hero-container {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        grid-template-areas:
+          "headline mockup"
+          "subheadline mockup"
+          "cta cta";
+        gap: 1.5rem 3.5rem;
+        align-items: center;
+        text-align: left;
+      }
+
+      .hero-headline {
+        grid-area: headline;
+        font-size: 2.6rem;
+        text-align: left;
+        margin-bottom: 0;
+      }
+
+      .hero-subheadline {
+        grid-area: subheadline;
+        font-size: 1.25rem;
+        text-align: left;
+        margin-top: 0;
+      }
+
+      .hero-mockup-wrap {
+        grid-area: mockup;
+        max-width: 100%;
+        justify-content: flex-end;
+      }
+
+      .hero-cta-wrap {
+        grid-area: cta;
+        text-align: center;
+        margin-top: 1.5rem;
+      }
+    }
+
+    /* --- BLOCO 2: DEMONSTRATIVO --- */
+    .demonstrative-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .demonstrative-footer-text {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-top: 2rem;
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+      color: var(--color-text-muted-dark);
+      line-height: 1.6;
+    }
+
+    /* Infinite Carousel */
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      cursor: grab;
+      user-select: none;
+      padding: 0.5rem 0;
+    }
+
+    .carousel-container:active {
+      cursor: grabbing;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 1.25rem;
+      width: max-content;
+      will-change: transform;
+    }
+
+    .carousel-img {
+      width: 70vw; /* 70% in mobile as requested */
+      max-width: 320px;
+      height: auto;
+      border-radius: 16px; /* Rounded corners, no border, no shadow */
+      pointer-events: none; /* Prevents dragging image element */
+      display: block;
+      object-fit: cover;
+    }
+
+    @media (min-width: 768px) {
+      .carousel-img {
+        width: 380px;
+        max-width: none;
+      }
+    }
+
+    /* --- BLOCO 3: BENEFÍCIOS --- */
+    .benefits-title {
+      font-size: 2rem;
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 1rem auto;
+    }
+
+    .benefits-intro {
+      font-size: 1.15rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 2.5rem auto;
+      color: var(--color-text-muted-light);
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 576px) {
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 992px) {
+      .benefits-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .benefit-card {
+      background-color: rgba(255, 255, 255, 0.03);
+      padding: 2rem 1.5rem;
+      border-radius: 16px;
+      text-align: center;
+      transition: transform 0.25s ease, background-color 0.25s;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      background-color: rgba(255, 255, 255, 0.06);
+    }
+
+    .benefit-icon-wrapper {
+      width: 60px;
+      height: 60px;
+      background-color: rgba(255, 107, 53, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem auto; /* Centralized icons */
+      color: var(--color-primary);
+    }
+
+    .benefit-icon-wrapper svg {
+      width: 30px;
+      height: 30px;
+      fill: currentColor;
+    }
+
+    .benefit-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--color-text-light);
+    }
+
+    .benefit-desc {
+      font-size: 0.95rem;
+      color: var(--color-text-muted-light);
+      line-height: 1.5;
+    }
+
+    /* --- BLOCO 4: URGÊNCIA + VÍDEO --- */
+    .urgency-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .urgency-title {
+      font-size: 2rem;
+      max-width: 850px;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Video wrapper styling */
+    .video-wrap {
+      width: 100%;
+      max-width: 340px; /* Vertical format dimensions */
+      aspect-ratio: 9 / 16;
+      border-radius: 20px; /* Rounded corners */
+      overflow: hidden;
+      margin: 1rem auto 2rem auto;
+      background-color: #000000;
+      box-shadow: none; /* No shadow as requested */
+      pointer-events: none; /* Disable all controls and interactions */
+    }
+
+    .video-wrap iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: none;
+    }
+
+    .urgency-body-text {
+      font-size: 1.15rem;
+      max-width: 800px;
+      color: var(--color-text-muted-dark);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    /* --- BLOCO 5: IDEAL PARA VOCÊ QUE DESEJA --- */
+    .ideal-title {
+      font-size: 2.1rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      letter-spacing: 1px;
+    }
+
+    .ideal-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .ideal-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .ideal-card {
+      background-color: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 2.2rem 1.8rem;
+      text-align: center;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+
+    .ideal-card:hover {
+      border-color: rgba(255, 107, 53, 0.3);
+      transform: translateY(-3px);
+    }
+
+    .ideal-icon-wrapper {
+      width: 54px;
+      height: 54px;
+      background-color: rgba(26, 165, 233, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem auto; /* Centralized icons */
+      color: #0ea5e9;
+    }
+
+    .ideal-icon-wrapper svg {
+      width: 26px;
+      height: 26px;
+      fill: currentColor;
+    }
+
+    .ideal-card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--color-text-light);
+      line-height: 1.4;
+    }
+
+    .ideal-card-desc {
+      font-size: 0.95rem;
+      color: var(--color-text-muted-light);
+      line-height: 1.6;
+    }
+
+    .ideal-cta-wrap {
+      text-align: center;
+    }
+
+    /* --- BLOCO 6: RECEBIMENTO PRINCIPAL --- */
+    .receive-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .receive-title {
+      font-size: 2rem;
+      text-align: center;
+      max-width: 800px;
+      margin-bottom: 0.5rem;
+    }
+
+    .receive-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
+      width: 100%;
+    }
+
+    .receive-mockup-wrap {
+      width: 100%;
+      max-width: 440px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .receive-mockup-wrap img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .receive-details {
+      width: 100%;
+      max-width: 550px;
+    }
+
+    .receive-product-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--color-text-dark);
+      position: relative;
+      padding-bottom: 0.75rem;
+    }
+
+    .receive-product-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      height: 4px;
+      background-color: var(--color-primary);
+      border-radius: 2px;
+    }
+
+    .receive-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .receive-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--color-text-dark);
+    }
+
+    .receive-item svg {
+      width: 22px;
+      height: 22px;
+      fill: #16a34a;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .receive-item.and-more {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-top: 0.5rem;
+      padding-left: 1.9rem;
+    }
+
+    @media (min-width: 992px) {
+      .receive-content {
+        flex-direction: row;
+        justify-content: center;
+        gap: 4rem;
+        align-items: center;
+      }
+      .receive-mockup-wrap {
+        max-width: 480px;
+      }
+    }
+
+        /* --- BLOCO 7: BÔNUS --- */
+    .bonus-title {
+      font-size: 2rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 3rem auto;
+    }
+
+    .bonus-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .bonus-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Bonus Card: White background to blend white-background images perfectly */
+    .bonus-card {
+      background-color: #ffffff;
+      color: var(--color-text-dark);
+      border: 1px solid rgba(0, 0, 0, 0.06); /* very soft border to differentiate */
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .bonus-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .bonus-img-wrap {
+      width: 100%;
+      height: 280px; /* Increased height for mobile */
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 0; /* No padding to maximize image size */
+      border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    @media (min-width: 768px) {
+      .bonus-img-wrap {
+        height: 340px; /* Increased height for desktop */
+      }
+    }
+
+    .bonus-img-wrap img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .bonus-card:hover .bonus-img-wrap img {
+      transform: scale(1.04);
+    }
+
+    .bonus-info {
+      padding: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .bonus-badge {
+      display: inline-flex;
+      align-items: center;
+      align-self: flex-start;
+      background-color: rgba(255, 107, 53, 0.12);
+      color: var(--color-primary);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.4rem 0.9rem;
+      border-radius: 50px; /* Capsule/Pill badge */
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .bonus-name {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--color-text-dark);
+      line-height: 1.3;
+    }
+
+    .bonus-desc {
+      font-size: 0.98rem;
+      color: var(--color-text-muted-dark);
+      line-height: 1.6;
+      margin-bottom: 1.75rem;
+      flex-grow: 1;
+    }
+
+    .bonus-price-wrap {
+      border-top: 1px dashed rgba(0, 0, 0, 0.12);
+      padding-top: 1.25rem;
+      font-size: 0.95rem;
+      color: var(--color-text-muted-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .bonus-price-original {
+      text-decoration: line-through;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    .bonus-price-free {
+      color: #16a34a;
+      font-weight: 700;
+      font-size: 1rem;
+      background-color: rgba(22, 163, 74, 0.12);
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      letter-spacing: 0.5px;
+      display: inline-block;
+    }
+
+    /* --- BLOCO 8: OFERTA E VALORES --- */
+    .plans-title {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .plans-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .plans-grid {
+        flex-direction: row;
+        align-items: stretch;
+      }
+      .mobile-upsell-warning {
+        display: none !important;
+      }
+    }
+
+    .mobile-upsell-warning {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: -1rem 0;
+    }
+
+    /* Card background is white to blend white-background images perfectly */
+    .plan-card {
+      background-color: #ffffff;
+      color: var(--color-text-dark);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.25s ease, border-color 0.25s;
+    }
+
+    .plan-card.featured {
+      border: 2px solid var(--color-primary);
+      transform: scale(1.02);
+    }
+    
+    @media (max-width: 768px) {
+      .plan-card.featured {
+        transform: scale(1);
+      }
+    }
+
+    .plan-badge-top {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--color-primary);
+      color: #ffffff;
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 10px rgba(255, 107, 53, 0.3);
+    }
+
+    .plan-header {
+      padding: 2.2rem 2.2rem 1.5rem 2.2rem;
+      text-align: center;
+    }
+
+    .plan-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .plan-sub-headline {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Image inside plan card takes full width */
+    .plan-mockup-img-wrap {
+      width: 100%;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .plan-mockup-img-wrap img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .plan-body {
+      padding: 1.5rem 2.2rem;
+      flex-grow: 1;
+    }
+
+    .plan-list-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--color-text-muted-dark);
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .plan-items {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .plan-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--color-text-dark);
+    }
+
+    .plan-item svg {
+      width: 18px;
+      height: 18px;
+      fill: #16a34a;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .plan-item-bonus-gift {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      padding-left: 0.2rem;
+    }
+
+    .plan-item-bonus-gift span {
+      flex-shrink: 0;
+    }
+
+    .plan-pricing-wrap {
+      padding: 1.5rem 2.2rem;
+      background-color: var(--color-bg-light-alt);
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    .plan-pricing-original {
+      font-size: 0.95rem;
+      color: var(--color-text-muted-dark);
+      margin-bottom: 0.4rem;
+    }
+
+    .plan-pricing-original span {
+      text-decoration: line-through;
+    }
+
+    .plan-pricing-label {
+      font-size: 0.9rem;
+      color: var(--color-text-muted-dark);
+      font-weight: 500;
+    }
+
+    /* Price highlighted in size and color */
+    .plan-price-highlight {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #16a34a;
+      margin: 0.2rem 0;
+      display: block;
+      line-height: 1.1;
+    }
+
+    .plan-price-installment {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-text-dark);
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+
+    .plan-cta-wrapper {
+      width: 100%;
+    }
+
+    .plan-cta-wrapper .btn-cta {
+      width: 100%;
+    }
+
+    .plan-footer-subtext {
+      font-size: 0.85rem;
+      color: var(--color-text-muted-dark);
+      margin-top: 0.85rem;
+      font-weight: 500;
+      display: block;
+    }
+
+    .plans-bottom-headline {
+      text-align: center;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-top: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* --- BLOCO 9: PERGUNTAS FREQUENTES --- */
+    .faq-title {
+      font-size: 2.1rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      letter-spacing: 1px;
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1.35rem 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-text-light);
+      transition: color 0.25s ease;
+      user-select: none;
+      gap: 1rem;
+    }
+
+    .faq-question:hover {
+      color: var(--color-primary);
+    }
+
+    .faq-icon {
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 1;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      color: var(--color-text-muted-light);
+      flex-shrink: 0;
+      user-select: none;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s;
+      color: var(--color-text-muted-light);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      padding-right: 1.5rem;
+    }
+
+    .faq-answer p {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Accordion Open State */
+    .faq-item.active .faq-answer {
+      max-height: 600px; /* Generous height to allow full answers */
+      padding-top: 0.85rem;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+      color: var(--color-primary);
+    }
+
+    /* --- BLOCO 10: RODAPÉ --- */
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--color-text-muted-light);
+      line-height: 1.6;
+    }
+
+    .footer-copy {
+      font-weight: 600;
+      color: var(--color-text-light);
+    }
+
+    .footer-disclaimer {
+      max-width: 900px;
+      margin-top: 0.5rem;
+    }
+
+    .footer-legal {
+      max-width: 900px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 1.5rem;
+    }
+
+    .footer-email {
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer-email:hover {
+      text-decoration: underline;
+    }
+
+    /* --- FULL SCREEN OVERLAY POPUP --- */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--color-bg-dark); /* Solid dark background */
+      z-index: 100000;
+      overflow-y: auto;
+      display: none; /* Controlled via JS */
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Red Countdown Banner on Top */
+    .popup-countdown-banner {
+      background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+      color: #ffffff;
+      padding: 0.6rem 1rem;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.95rem;
+      position: sticky;
+      top: 0;
+      z-index: 100001;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .popup-countdown-timer {
+      font-size: 1.05rem;
+      background-color: #ffffff;
+      color: #be123c;
+      padding: 0.25rem 0.8rem;
+      border-radius: 50px;
+      font-family: var(--font-primary);
+      font-weight: 800;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .popup-wrapper {
+      max-width: 680px;
+      margin: 1.5rem auto 3rem auto;
+      padding: 0 1.25rem;
+      position: relative;
+    }
+
+    /* Close Button */
+    .popup-close-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 1.25rem;
+      background: none;
+      border: none;
+      color: var(--color-text-muted-light);
+      font-size: 2rem;
+      font-weight: 300;
+      cursor: pointer;
+      line-height: 1;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s;
+    }
+
+    .popup-close-btn:hover {
+      color: #ffffff;
+    }
+
+    .popup-header {
+      text-align: center;
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .popup-badge {
+      display: inline-block;
+      background-color: rgba(255, 107, 53, 0.15);
+      color: var(--color-primary);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .popup-headline {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--color-text-light);
+      line-height: 1.3;
+    }
+
+    .popup-offer-desc {
+      text-align: center;
+      font-size: 1.15rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      color: var(--color-text-light);
+    }
+
+    /* White container inside popup for complete plan elements to blend white background images */
+    .popup-product-card {
+      background-color: #ffffff;
+      color: var(--color-text-dark);
+      border-radius: 20px;
+      padding: 1.8rem;
+      margin-bottom: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .popup-mockup-wrap {
+      width: 100%;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .popup-mockup-wrap img {
+      width: 100%;
+      max-height: 280px;
+      object-fit: contain;
+    }
+
+    .popup-list-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--color-text-muted-dark);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      padding-bottom: 0.5rem;
+    }
+
+    .popup-items-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.6rem;
+    }
+
+    @media (min-width: 480px) {
+      .popup-items-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .popup-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--color-text-dark);
+    }
+
+    .popup-item svg {
+      width: 16px;
+      height: 16px;
+      fill: #16a34a;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .popup-item-bonus {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+
+    .popup-item-bonus span:first-child {
+      flex-shrink: 0;
+    }
+
+    .popup-action-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      text-align: center;
+    }
+
+    .popup-btn-accept {
+      width: 100%;
+      max-width: 450px;
+    }
+
+    .popup-btn-decline {
+      background: none;
+      border: none;
+      color: var(--color-text-muted-light);
+      font-family: var(--font-primary);
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+
+    .popup-btn-decline:hover {
+      color: #ffffff;
+    }
+
+    @media (max-width: 480px) {
+      .popup-headline {
+        font-size: 1.5rem;
+      }
+      .popup-offer-desc {
+        font-size: 1.05rem;
+      }
+      .popup-product-card {
+        padding: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BLOCO 1: VENDA IMEDIATA (HEADLINE, MOCKUP PRINCIPAL E SUB HEADLINE) -->
+  <section class="section-dark">
+    <div class="container hero-container">
+      <h1 class="hero-headline">
+        Pare de <span class="highlight-dark">perder horas</span> procurando atividades educativas…e tenha acesso imediato a <span class="highlight-dark">+20 mil materiais prontos</span> para ensinar crianças brincando.
+      </h1>
+      
+      <div class="hero-mockup-wrap">
+        <img src="./imgs/mockup-principal.webp" alt="Biblioteca Educacional +20 mil Mockup Principal" width="460" height="350">
+      </div>
+      
+      <p class="hero-subheadline">
+        A Biblioteca Educacional +20 mil reúne atividades <span class="highlight-dark">organizadas por idade, habilidade e aprendizado</span> para mães, pais e professores ensinarem de <span class="highlight-dark">forma divertida, prática e sem estresse</span>.
+      </p>
+      
+      <div class="hero-cta-wrap">
+        <a href="#planos" class="btn-cta btn-pulse">QUERO ACESSAR A BIBLIOTECA +20 mil</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCO 2: DEMONSTRATIVO (PROVA VISUAL DO PRODUTO) -->
+  <section class="section-light" style="padding-top: 3.5rem; padding-bottom: 3.5rem;">
+    <div class="container" style="padding-top: 0; padding-bottom: 2rem;">
+      <h2 class="demonstrative-title">
+        Veja na prática tudo o que você encontra dentro da Biblioteca Educacional +20 mil
+      </h2>
+    </div>
+      
+    <!-- Horizontal infinite draggable carousel -->
+    <div class="carousel-container" id="carouselContainer">
+      <div class="carousel-track" id="carouselTrack">
+        <img src="./imgs/carrossel-1.webp" alt="Exemplo Carrossel 1" class="carousel-img" width="380" height="280">
+        <img src="./imgs/carrossel-2.webp" alt="Exemplo Carrossel 2" class="carousel-img" width="380" height="280">
+        <img src="./imgs/carrossel-3.webp" alt="Exemplo Carrossel 3" class="carousel-img" width="380" height="280">
+        <img src="./imgs/carrossel-4.webp" alt="Exemplo Carrossel 4" class="carousel-img" width="380" height="280">
+        <img src="./imgs/carrossel-5.webp" alt="Exemplo Carrossel 5" class="carousel-img" width="380" height="280">
+        <img src="./imgs/carrossel-6.webp" alt="Exemplo Carrossel 6" class="carousel-img" width="380" height="280">
+        <img src="./imgs/carrossel-7.webp" alt="Exemplo Carrossel 7" class="carousel-img" width="380" height="280">
+      </div>
+    </div>
+
+    <div class="container" style="padding-top: 2rem; padding-bottom: 0;">
+      <p class="demonstrative-footer-text">
+        São milhares de <span class="highlight-light">atividades educativas prontas, organizadas e fáceis de usar</span> para transformar o aprendizado infantil em algo <span class="highlight-light">leve, divertido e sem complicação</span>.
+      </p>
+    </div>
+  </section>
+
+  <!-- BLOCO 3: BENEFÍCIOS DO PRODUTO -->
+  <section class="section-dark-alt">
+    <div class="container">
+      <h2 class="benefits-title">
+        Mais do que atividades prontas… uma forma simples de ensinar crianças com <span class="highlight-dark">leveza, organização e diversão</span>.
+      </h2>
+      <p class="benefits-intro">
+        A Biblioteca Educacional +20 mil foi criada para ajudar mães, pais e professores a <span class="highlight-dark">economizarem tempo</span> enquanto proporcionam um <span class="highlight-dark">aprendizado mais divertido e eficiente</span> para as crianças.
+      </p>
+      
+      <div class="benefits-grid">
+        <!-- BENEFÍCIO FUNCIONAL -->
+        <div class="benefit-card">
+          <div class="benefit-icon-wrapper">
+            <!-- Center aligned icon -->
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/></svg>
+          </div>
+          <h3 class="benefit-name">Sem perder tempo</h3>
+          <p class="benefit-desc">Chega de passar horas planejando ou buscando materiais na internet. Tudo o que você precisa está organizado em um só lugar, pronto para baixar, imprimir e aplicar.</p>
+        </div>
+
+        <!-- BENEFÍCIO EMOCIONAL -->
+        <div class="benefit-card">
+          <div class="benefit-icon-wrapper">
+            <!-- Center aligned icon -->
+            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <h3 class="benefit-name">Sem frustrações</h3>
+          <p class="benefit-desc">Veja as crianças se desenvolverem com alegria e entusiasmo, eliminando o estresse dos momentos de estudo e transformando o aprendizado em brincadeira.</p>
+        </div>
+
+        <!-- SOLUÇÃO -->
+        <div class="benefit-card">
+          <div class="benefit-icon-wrapper">
+            <!-- Center aligned icon -->
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+          </div>
+          <h3 class="benefit-name">Tudo à mão</h3>
+          <p class="benefit-desc">Acesse de onde estiver, seja pelo celular, tablet ou computador. Tenha em mãos a biblioteca completa organizada por idade e áreas de desenvolvimento.</p>
+        </div>
+
+        <!-- QUEBRA DE OBJEÇÃO -->
+        <div class="benefit-card">
+          <div class="benefit-icon-wrapper">
+            <!-- Center aligned icon -->
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </div>
+          <h3 class="benefit-name">7 dias de garantia</h3>
+          <p class="benefit-desc">Experimente todo o material sem riscos. Se em até 7 dias você não perceber a evolução e a praticidade, devolvemos 100% do seu dinheiro investido.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCO 4: HEADLINE DE URGÊNCIA + BOTÃO -->
+  <section class="section-light">
+    <div class="container urgency-container">
+      <h2 class="urgency-title">
+        Pare de <span class="highlight-light">improvisar atividades</span> todos os dias e tenha <span class="highlight-light">acesso imediato</span> à Biblioteca Educacional +20 mil hoje mesmo.
+      </h2>
+      
+      <!-- Autoplay loop muted vertical format video -->
+      <div class="video-wrap">
+        <iframe 
+          src="https://www.youtube.com/embed/3jRt_oakp4o?autoplay=1&mute=1&loop=1&playlist=3jRt_oakp4o&controls=0&modestbranding=1&rel=0&playsinline=1&enablejsapi=1" 
+          title="Vídeo demonstrativo"
+          frameborder="0" 
+          allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <p class="urgency-body-text">
+        Enquanto muitas mães e professoras continuam <span class="highlight-light">perdendo horas</span> procurando conteúdos espalhados na internet… você pode ter <span class="highlight-light">milhares de atividades organizadas</span>, prontas para imprimir e aplicar em <span class="highlight-light">poucos minutos</span>.
+      </p>
+
+      <a href="#planos" class="btn-cta btn-pulse">QUERO ACESSAR A BIBLIOTECA +20 mil</a>
+    </div>
+  </section>
+
+  <!-- BLOCO 5: IDEAL PARA VOCÊ QUE DESEJA -->
+  <section class="section-dark">
+    <div class="container">
+      <h2 class="ideal-title">IDEAL PARA VOCÊ QUE DESEJA:</h2>
+      
+      <div class="ideal-grid">
+        <!-- ITEM 1 -->
+        <div class="ideal-card">
+          <div class="ideal-icon-wrapper">
+            <!-- Center aligned icon -->
+            <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.17 19.58 10.53 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+          </div>
+          <h3 class="ideal-card-title">Ensinar crianças de forma divertida sem precisar criar atividades do zero.</h3>
+          <p class="ideal-card-desc">Você não precisa mais gastar horas pensando no que fazer ou procurando conteúdos espalhados pela internet. As atividades já estão prontas para imprimir e aplicar imediatamente.</p>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="ideal-card">
+          <div class="ideal-icon-wrapper">
+            <!-- Center aligned icon -->
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </div>
+          <h3 class="ideal-card-title">Prender a atenção infantil com atividades leves e educativas.</h3>
+          <p class="ideal-card-desc">Sabemos como pode ser difícil manter a criança focada por muito tempo. Por isso, os materiais foram pensados para transformar aprendizado em momentos mais divertidos e envolventes.</p>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="ideal-card">
+          <div class="ideal-icon-wrapper">
+            <!-- Center aligned icon -->
+            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5.47 12.18L12 15.73l6.53-3.55-6.53-3.55-6.53 3.55zM12 18.27l-6.5-3.54v1.74l6.5 3.53 6.5-3.53v-1.74l-6.5 3.54z"/></svg>
+          </div>
+          <h3 class="ideal-card-title">Ensinar melhor mesmo sem experiência pedagógica.</h3>
+          <p class="ideal-card-desc">Tudo foi criado de maneira simples e intuitiva para mães, pais e professores aplicarem facilmente no dia a dia — sem precisar entender de pedagogia.</p>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="ideal-card">
+          <div class="ideal-icon-wrapper">
+            <!-- Center aligned icon -->
+            <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+          </div>
+          <h3 class="ideal-card-title">Ter materiais organizados para usar durante o ano inteiro.</h3>
+          <p class="ideal-card-desc">Em vez de depender de pesquisas intermináveis ou improvisos de última hora, você terá uma biblioteca completa sempre disponível quando precisar.</p>
+        </div>
+      </div>
+
+      <div class="ideal-cta-wrap">
+        <a href="#planos" class="btn-cta btn-pulse">QUERO GARANTIR MEU ACESSO</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCO 6: TUDO O QUE VOCÊ VAI RECEBER (PRODUTO PRINCIPAL) -->
+  <section class="section-light">
+    <div class="container receive-container">
+      <h2 class="receive-title">
+        Veja tudo o que você vai receber ao entrar para a Biblioteca Educacional +20 mil
+      </h2>
+      
+      <div class="receive-content">
+        <!-- Mockup do Produto principal (no shadows, no borders) -->
+        <div class="receive-mockup-wrap">
+          <img src="./imgs/mockup-principal.webp" alt="Biblioteca +20 mil Kit Completo" width="440" height="340">
+        </div>
+        
+        <div class="receive-details">
+          <h3 class="receive-product-title">+20.000 Atividades Educativas Prontas</h3>
+          
+          <ul class="receive-list">
+            <li class="receive-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Materiais Organizados por Idade e Habilidade</span>
+            </li>
+            <li class="receive-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Atividades de Alfabetização</span>
+            </li>
+            <li class="receive-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Coordenação Motora e Desenvolvimento Infantil</span>
+            </li>
+            <li class="receive-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Matemática e Raciocínio Lógico</span>
+            </li>
+            <li class="receive-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Pintura, Criatividade e Concentração</span>
+            </li>
+            <li class="receive-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Arquivos em PDF Prontos para Imprimir</span>
+            </li>
+            <li class="receive-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Área de Membros Exclusiva</span>
+            </li>
+            <li class="receive-item and-more">
+              E muito mais …
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCO 7: BÔNUS -->
+  <section class="section-dark-alt">
+    <div class="container">
+      <h2 class="bonus-title">
+        E para deixar sua experiência ainda mais completa… você também vai receber estes bônus exclusivos 🎁
+      </h2>
+      
+      <div class="bonus-grid">
+        <!-- BÔNUS 1 -->
+        <div class="bonus-card">
+          <!-- Card white background blends with image white background -->
+          <div class="bonus-img-wrap">
+            <img src="./imgs/bonus-1.webp" alt="Mockup Bônus 1 - Exercícios de Matemática" width="300" height="200" loading="lazy">
+          </div>
+          <div class="bonus-info">
+            <span class="bonus-badge">BÔNUS 1 EXCLUSIVO</span>
+            <h3 class="bonus-name">Exercícios de Matemática</h3>
+            <p class="bonus-desc">Centenas de atividades práticas e prontas para aplicar em sala de aula. Economize tempo no planejamento e reforce o aprendizado dos alunos com testes focados.</p>
+            <div class="bonus-price-wrap">
+              <span>Valor Individual: <span class="bonus-price-original">R$ 59,90</span></span>
+              <span class="bonus-price-free">Grátis no Plano Completo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BÔNUS 2 -->
+        <div class="bonus-card">
+          <div class="bonus-img-wrap">
+            <img src="./imgs/bonus-2.webp" alt="Mockup Bônus 2 - Planos de Aula Prontos" width="300" height="200" loading="lazy">
+          </div>
+          <div class="bonus-info">
+            <span class="bonus-badge">BÔNUS 2 EXCLUSIVO</span>
+            <h3 class="bonus-name">Planos de Aula Prontos</h3>
+            <p class="bonus-desc">Roteiros didáticos completos e alinhados às diretrizes educacionais atuais. Basta baixar, adaptar a sua realidade e aplicar sem estresse.</p>
+            <div class="bonus-price-wrap">
+              <span>Valor Individual: <span class="bonus-price-original">R$ 69,90</span></span>
+              <span class="bonus-price-free">Grátis no Plano Completo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BÔNUS 3 -->
+        <div class="bonus-card">
+          <div class="bonus-img-wrap">
+            <img src="./imgs/bonus-3.webp" alt="Mockup Bônus 3 - Exercícios Inclusivos para PcD" width="300" height="200" loading="lazy">
+          </div>
+          <div class="bonus-info">
+            <span class="bonus-badge">BÔNUS 3 EXCLUSIVO</span>
+            <h3 class="bonus-name">Exercícios Inclusivos para PcD</h3>
+            <p class="bonus-desc">Atividades adaptadas para atender às necessidades específicas de alunos com deficiência. Promova uma verdadeira inclusão escolar de forma simples e eficaz.</p>
+            <div class="bonus-price-wrap">
+              <span>Valor Individual: <span class="bonus-price-original">R$ 61,40</span></span>
+              <span class="bonus-price-free">Grátis no Plano Completo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BÔNUS 4 -->
+        <div class="bonus-card">
+          <div class="bonus-img-wrap">
+            <img src="./imgs/bonus-4.webp" alt="Mockup Bônus 4 - Exercícios de Alfabetização" width="300" height="200" loading="lazy">
+          </div>
+          <div class="bonus-info">
+            <span class="bonus-badge">BÔNUS 4 EXCLUSIVO</span>
+            <h3 class="bonus-name">Exercícios de Alfabetização</h3>
+            <p class="bonus-desc">Material lúdico e sequencial para acelerar o processo de leitura e escrita. Ideal para fixar o aprendizado das letras e fonemas com facilidade.</p>
+            <div class="bonus-price-wrap">
+              <span>Valor Individual: <span class="bonus-price-original">R$ 59,90</span></span>
+              <span class="bonus-price-free">Grátis no Plano Completo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <p style="text-align: center; font-size: 1.1rem; color: var(--color-text-light); margin-top: 2.5rem; font-weight: 600;">
+        Todos os bônus somados valeriam <span class="highlight-dark">R$ 251,10</span>, mas você levará todos de forma <span class="highlight-dark">100% gratuita</span> no Plano Completo!
+      </p>
+    </div>
+  </section>
+
+  <!-- BLOCO 8: OFERTA E VALORES (PLANOS) -->
+  <section class="section-light" id="planos">
+    <div class="container" style="padding-top: 3.5rem;">
+      <h2 class="plans-title">Escolha a melhor opção para você:</h2>
+      
+      <div class="plans-grid">
+        
+        <!-- PLANO BÁSICO -->
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3 class="plan-name">PLANO BÁSICO</h3>
+          </div>
+          
+          <div class="plan-mockup-img-wrap">
+            <img src="./imgs/plano-basico.webp" alt="Biblioteca Educacional +20 mil Plano Básico" width="400" height="250" loading="lazy">
+          </div>
+          
+          <div class="plan-body">
+            <h4 class="plan-list-title">O que você vai receber:</h4>
+            <ul class="plan-items">
+              <li class="plan-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Biblioteca Educacional +20 mil</span>
+              </li>
+              <li class="plan-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>+20.000 atividades educativas prontas</span>
+              </li>
+              <li class="plan-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Arquivos em PDF</span>
+              </li>
+              <li class="plan-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Materiais organizados por idade e habilidade</span>
+              </li>
+              <li class="plan-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Atividades para alfabetização, matemática, leitura e coordenação</span>
+              </li>
+              <li class="plan-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Área de membros exclusiva</span>
+              </li>
+              <li class="plan-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Acesso imediato</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="plan-pricing-wrap">
+            <p class="plan-pricing-original">De <span>R$ 179,00</span> por:</p>
+            <p class="plan-pricing-label">Apenas</p>
+            <span class="plan-price-highlight">R$ 17,90</span>
+            <span class="plan-price-installment">ou 3x de R$ 6,39 no cartão</span>
+            
+            <div class="plan-cta-wrapper">
+              <button type="button" class="btn-cta btn-pulse" id="openPopupBtn">QUERO O BÁSICO</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mobile-upsell-warning">
+          <span class="red-pulse-text">Atenção: Temos uma oferta ainda mais vantajosa para você! Veja logo abaixo.</span>
+          <span class="bounce-arrow">▼</span>
+        </div>
+
+        <!-- PLANO COMPLETO -->
+        <div class="plan-card featured">
+          <span class="plan-badge-top">MAIS VENDIDO 🔥</span>
+          
+          <div class="plan-header">
+            <h3 class="plan-name" style="margin-top: 0.5rem;">PLANO COMPLETO</h3>
+            <span class="plan-sub-headline">TODOS OS BÔNUS INCLUSOS</span>
+          </div>
+          
+          <div class="plan-mockup-img-wrap">
+            <img src="./imgs/plano-completo.webp" alt="Biblioteca Educacional +20 mil Plano Completo" width="400" height="250" loading="lazy">
+          </div>
+          
+          <div class="plan-body">
+            <span class="plan-sub-headline" style="display: block; text-align: center; margin-bottom: 1rem;">Todos Materiais (Recebimento Imediato)</span>
+            
+            <h4 class="plan-list-title">O que você vai receber:</h4>
+            <ul class="plan-items">
+              <li class="plan-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Biblioteca Educacional +20 mil</span>
+              </li>
+              <li class="plan-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>+20.000 atividades educativas prontas</span>
+              </li>
+              <li class="plan-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Arquivos em PDF</span>
+              </li>
+              <li class="plan-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Materiais editáveis</span>
+              </li>
+              <li class="plan-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Área de membros exclusiva</span>
+              </li>
+              <li class="plan-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Atualizações frequentes</span>
+              </li>
+              
+              <!-- BÔNUS LIST IN COMPLETO -->
+              <li class="plan-item-bonus-gift" style="margin-top: 0.5rem; border-top: 1px dashed rgba(255, 107, 53, 0.2); padding-top: 0.5rem;">
+                <span>🎁</span>
+                <span>Exercícios de Matemática (Bônus)</span>
+              </li>
+              <li class="plan-item-bonus-gift">
+                <span>🎁</span>
+                <span>Planos de Aula Prontos (Bônus)</span>
+              </li>
+              <li class="plan-item-bonus-gift">
+                <span>🎁</span>
+                <span>Exercícios Inclusivos para PcD (Bônus)</span>
+              </li>
+              <li class="plan-item-bonus-gift">
+                <span>🎁</span>
+                <span>Exercícios de Alfabetização (Bônus)</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="plan-pricing-wrap" style="background-color: rgba(255, 107, 53, 0.03);">
+            <p class="plan-pricing-original">De <span>R$ 279,00</span> por:</p>
+            <p class="plan-pricing-label">Apenas</p>
+            <span class="plan-price-highlight" style="color: #16a34a;">R$ 27,90</span>
+            <span class="plan-price-installment">ou 6x de R$ 5,24 no cartão</span>
+            
+            <div class="plan-cta-wrapper">
+              <a href="https://ggcheckout.app/checkout/v2/ckKBdLwJuAM1p5vLkhPa" class="btn-cta btn-pulse" style="display: block;">QUERO O COMPLETO</a>
+            </div>
+            <span class="plan-footer-subtext">APROVEITE AGORA: Você não vai encontrar esse preço depois!</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCO 9: PERGUNTAS FREQUENTES (FAQ) -->
+  <section class="section-dark">
+    <div class="container">
+      <h2 class="faq-title">PERGUNTAS FREQUENTES</h2>
+      
+      <div class="faq-list">
+        <!-- FAQ 1 (Open by default) -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Como recebo acesso à Biblioteca Educacional +20 mil?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>O acesso é enviado imediatamente após a confirmação do pagamento.</p>
+            <p>Você receberá os dados por e-mail para entrar na área de membros e acessar todos os materiais.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>As atividades são realmente prontas para imprimir?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Sim.</p>
+            <p>Você poderá baixar os arquivos em PDF e imprimir quando quiser de forma simples e rápida.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Preciso ter experiência pedagógica para usar?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Não.</p>
+            <p>A Biblioteca Educacional +20 mil foi criada justamente para facilitar a vida de mães, pais e professores, mesmo sem experiência pedagógica.</p>
+            <p>Tudo já está organizado e pronto para usar.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>As atividades servem para quais idades?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>A biblioteca possui materiais variados organizados por idade, habilidade e tipo de aprendizado infantil.</p>
+            <p>Você encontrará atividades para diferentes fases do desenvolvimento da criança.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Vou receber acesso vitalício?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Sim.</p>
+            <p>Após a compra, o acesso à Biblioteca Educacional +20 mil será seu para acessar quando quiser.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Posso acessar pelo celular?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Sim.</p>
+            <p>Você poderá acessar a área de membros pelo celular, tablet ou computador com internet.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Os materiais são editáveis?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Sim.</p>
+            <p>Além dos PDFs prontos para impressão, você também terá acesso a materiais editáveis para personalizar quando desejar.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Como funciona a garantia?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Você possui 7 dias de garantia incondicional.</p>
+            <p>Caso ache que a Biblioteca Educacional +20 mil não é para você, basta solicitar o reembolso dentro do prazo.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 9 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>As atividades ajudam realmente no aprendizado infantil?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Sim.</p>
+            <p>Os materiais foram desenvolvidos para estimular:</p>
+            <p>alfabetização;</p>
+            <p>coordenação motora;</p>
+            <p>raciocínio lógico;</p>
+            <p>concentração;</p>
+            <p>criatividade;</p>
+            <p>desenvolvimento infantil de forma divertida.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 10 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Por quanto tempo terei acesso às atualizações?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Você terá acesso às atualizações disponibilizadas dentro da plataforma conforme novos materiais forem adicionados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCO 10: RODAPÉ -->
+  <footer class="section-dark-alt" style="background-color: #060514; border-top: 1px solid rgba(255, 255, 255, 0.03);">
+    <div class="container footer-content">
+      <p class="footer-copy">
+        &copy; <span id="currentYear"></span> Elite Produtos Digitais | Todos os direitos reservados.
+      </p>
+      
+      <p class="footer-disclaimer">
+        Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site. A compra desse material não garante nenhum tipo de resultado. Fazemos todos os esforços para indicar claramente e mostrar todas as provas do produto e usamos resultados reais de alunos.
+      </p>
+
+      <p class="footer-legal">
+        Todos os direitos sobre a obra “Biblioteca Educacional +20 mil” são reservados ao produtor, nos termos da Lei nº 9.610/98 (Lei de Direitos Autorais). A reprodução não autorizada desta publicação, no todo ou em parte, por quaisquer meios, constitui violação dos direitos autorais (Art. 184 do Código Penal e Lei 9.610/98), sujeitando os infratores às sanções civis e criminais previstas na legislação aplicável. Em caso de dúvidas, suporte ou problemas de acesso, entre em contato pelo nosso e-mail de atendimento: <a href="mailto:suporte@elitepd.com.br" class="footer-email">suporte@elitepd.com.br</a> Horário de atendimento: segunda a sexta, das 8h às 16h.
+      </p>
+    </div>
+  </footer>
+
+  <!-- POP-UP DE UPSELL EM TELA CHEIA (ABRE AO CLICAR EM QUERO O BÁSICO) -->
+  <div class="popup-overlay" id="upsellPopup">
+    <!-- Faixa Vermelha Superior Fixa com o Cronômetro -->
+    <div class="popup-countdown-banner">
+      <span>🔥 Oferta Especial: Plano Completo por R$ 22,90</span>
+      <div class="popup-countdown-timer" id="popupTimer">15:00</div>
+    </div>
+    
+    <div class="popup-wrapper">
+      <!-- Botão Fechar -->
+      <button class="popup-close-btn" id="closePopupBtn" aria-label="Fechar pop-up">&times;</button>
+      
+      <div class="popup-header">
+        <span class="popup-badge">Oportunidade Única</span>
+        <h2 class="popup-headline">Atenção! Você acaba de ganhar uma promoção exclusiva para ter o kit completo.</h2>
+      </div>
+      
+      <p class="popup-offer-desc">
+        Leve o <strong style="color: var(--color-primary);">PLANO COMPLETO</strong> de <span style="text-decoration: line-through; color: var(--color-red); font-weight: bold;">R$ 27,90</span> por apenas <strong style="color: #16a34a; font-size: 1.25rem;">R$ 22,90</strong> ou em até <strong style="color: #16a34a; font-size: 1.25rem;">5x de R$ 5,07</strong> no cartão!
+      </p>
+      
+      <!-- Container com conteúdo visual do Plano Completo -->
+      <div class="popup-product-card">
+        <!-- Mockup do Plano completo no popup (no shadows, no borders) -->
+        <div class="popup-mockup-wrap">
+          <img src="./imgs/plano-completo.webp" alt="Mockup do Plano Completo com Todos os Bônus" width="350" height="220">
+        </div>
+        
+        <h3 class="popup-list-title">Todos os Elementos Inclusos:</h3>
+        
+        <div class="popup-items-grid">
+          <div class="popup-item">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>Biblioteca Educacional +20 mil</span>
+          </div>
+          <div class="popup-item">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>+20.000 atividades prontas</span>
+          </div>
+          <div class="popup-item">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>Arquivos em PDF</span>
+          </div>
+          <div class="popup-item">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>Materiais editáveis</span>
+          </div>
+          <div class="popup-item">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>Área de membros exclusiva</span>
+          </div>
+          <div class="popup-item">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>Atualizações frequentes</span>
+          </div>
+          
+          <!-- Bônus no Popup -->
+          <div class="popup-item-bonus">
+            <span>🎁</span>
+            <span>Exercícios de Matemática</span>
+          </div>
+          <div class="popup-item-bonus">
+            <span>🎁</span>
+            <span>Planos de Aula Prontos</span>
+          </div>
+          <div class="popup-item-bonus">
+            <span>🎁</span>
+            <span>Exercícios PcD</span>
+          </div>
+          <div class="popup-item-bonus">
+            <span>🎁</span>
+            <span>Exercícios de Alfabetização</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Duas Opções de CTAs no Popup -->
+      <div class="popup-action-area">
+        <a href="https://ggcheckout.app/checkout/v2/W2vzTejgjcTUWLuhhzNP" class="btn-cta btn-pulse popup-btn-accept">Sim! Quero o Plano Completo por R$ 22,90</a>
+        <a href="https://ggcheckout.app/checkout/v2/hOL6JraiO0p0S9D7avTB" class="popup-btn-decline" id="declineUpsellLink">Não, obrigado. Quero apenas o Plano Básico por R$ 17,90</a>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT & INTERACTIVE ACTIONS -->
+  <script>
+    // 1. Dynamic Footer Year Update
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // 2. FAQ Accordion Logic
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach((item, index) => {
+      const question = item.querySelector('.faq-question');
+      
+      // First question open by default as requested
+      if (index === 0) {
+        item.classList.add('active');
+      }
+
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all items
+        faqItems.forEach(i => i.classList.remove('active'));
+        
+        // Open clicked item if it was closed
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // 3. Draggable Infinite Carousel Logic
+    const track = document.getElementById('carouselTrack');
+    const container = document.getElementById('carouselContainer');
+    
+    // Duplicate the carousel elements twice for smooth infinite loop illusion
+    const originalSlides = Array.from(track.children);
+    originalSlides.forEach(slide => {
+      const clone = slide.cloneNode(true);
+      track.appendChild(clone);
+    });
+    originalSlides.forEach(slide => {
+      const clone = slide.cloneNode(true);
+      track.appendChild(clone);
+    });
+
+    let currentX = 0;
+    let isDragging = false;
+    let startX = 0;
+    let speed = 1.0; // Adjust for readable speed
+    let trackWidth = track.scrollWidth / 3;
+
+    // Recalculate track width on resize and load
+    function initTrackWidth() {
+      trackWidth = track.scrollWidth / 3;
+      if (trackWidth > 0 && (currentX === 0 || currentX >= 0 || currentX <= -trackWidth * 2)) {
+        currentX = -trackWidth;
+        track.style.transform = `translateX(${currentX}px)`;
+      }
+    }
+
+    window.addEventListener('resize', initTrackWidth);
+    window.addEventListener('load', initTrackWidth);
+    
+    // Attempt initialization immediately
+    initTrackWidth();
+
+    function updateCarousel() {
+      if (!isDragging) {
+        // Infinite sliding from left to right (scrolling rightwards)
+        currentX += speed;
+        if (trackWidth > 0 && currentX >= 0) {
+          currentX = -trackWidth;
+        }
+        track.style.transform = `translateX(${currentX}px)`;
+      }
+      requestAnimationFrame(updateCarousel);
+    }
+
+    // Drag / Swipe listeners
+    container.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.clientX;
+      container.style.cursor = 'grabbing';
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      const dx = e.clientX - startX;
+      startX = e.clientX;
+      currentX += dx;
+
+      // Bound resets for infinite loops
+      if (trackWidth > 0) {
+        if (currentX >= 0) {
+          currentX -= trackWidth;
+        } else if (currentX <= -trackWidth * 2) {
+          currentX += trackWidth;
+        }
+      }
+      track.style.transform = `translateX(${currentX}px)`;
+    });
+
+    function stopDragging() {
+      if (isDragging) {
+        isDragging = false;
+        container.style.cursor = 'grab';
+      }
+    }
+
+    window.addEventListener('mouseup', stopDragging);
+    container.addEventListener('mouseleave', stopDragging);
+
+    // Touch events for mobile/tablets
+    container.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+
+    container.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      const dx = e.touches[0].clientX - startX;
+      startX = e.touches[0].clientX;
+      currentX += dx;
+
+      if (trackWidth > 0) {
+        if (currentX >= 0) {
+          currentX -= trackWidth;
+        } else if (currentX <= -trackWidth * 2) {
+          currentX += trackWidth;
+        }
+      }
+      track.style.transform = `translateX(${currentX}px)`;
+    }, { passive: true });
+
+    container.addEventListener('touchend', stopDragging);
+
+    // Start auto-scroll animation
+    requestAnimationFrame(updateCarousel);
+
+    // 4. Pop-up Upsell Interaction
+    const popup = document.getElementById('upsellPopup');
+    const openPopupBtn = document.getElementById('openPopupBtn');
+    const closePopupBtn = document.getElementById('closePopupBtn');
+    const declineUpsellLink = document.getElementById('declineUpsellLink');
+
+    // Countdown Timer logic: 15 minutes
+    let timeRemaining = 15 * 60;
+    const timerDisplay = document.getElementById('popupTimer');
+    let timerInterval;
+
+    function startTimer() {
+      if (timerInterval) clearInterval(timerInterval);
+      timerInterval = setInterval(() => {
+        const minutes = Math.floor(timeRemaining / 60);
+        let seconds = timeRemaining % 60;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+        
+        timerDisplay.textContent = `${minutes < 10 ? '0' + minutes : minutes}:${seconds}`;
+        
+        if (timeRemaining <= 0) {
+          clearInterval(timerInterval);
+          timerDisplay.textContent = "00:00";
+        }
+        timeRemaining--;
+      }, 1000);
+    }
+
+    function openPopup() {
+      popup.style.display = 'block';
+      document.body.style.overflow = 'hidden'; // Lock background scroll
+      startTimer();
+    }
+
+    function closePopup() {
+      popup.style.display = 'none';
+      document.body.style.overflow = ''; // Unlock background scroll
+      clearInterval(timerInterval);
+    }
+
+    openPopupBtn.addEventListener('click', openPopup);
+    closePopupBtn.addEventListener('click', closePopup);
+    
+    // Clicking ESC key closes popup too
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && popup.style.display === 'block') {
+        closePopup();
+      }
+    });
+
+    // Prevent direct closing when clicking background overlay content
+    popup.addEventListener('click', (e) => {
+      if (e.target === popup) {
+        closePopup();
+      }
+    });
+  </script>
+</body>
+</html>
+
